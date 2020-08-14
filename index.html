@@ -3,25 +3,40 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Callback-функции</title>
+        <title>Ключевое слово this</title>
         <style>
             body {
                 font-family: sans-serif;
             }
 
             button {
+                margin: 10px;
+                font-size: 16px;
                 font-family: inherit;
+                cursor: pointer;
+            }
+
+            .counter {
+                display: flex;
+                align-items: center;
+            }
+
+            .counter > p {
+                margin: 0;
+                font-size: 48px;
+                font-family: monospace;
             }
         </style>
     </head>
     <body>
-        <button class="js-button">
-            Это кнопка
-            <span role="image" aria-label="Иконка волшебника">🧙‍♂️</span>
-        </button>
+        <div class="counter">
+            <button class="js-decrement">Уменьшить</button>
+            <p class="js-value">0</p>
+            <button class="js-increment">Увеличить</button>
+        </div>
 
-        <!-- <script src="./js/01-callbacks.js" type="module"></script> -->
-        <!-- <script src="./js/02-closures.js" type="module"></script> -->
-        <script src="./js/03-arrow-fns.js" type="module"></script>
+        <!-- <script src="./js/01-this.js" type="module"></script> -->
+        <!-- <script src="./js/02-fn-methods.js" type="module"></script> -->
+        <script src="./js/03-counter.js" type="module"></script>
     </body>
 </html>
