@@ -1,33 +1,62 @@
-const counter = {
-    value: 0,
-    increment() {
-        console.log('increment -> this', this);
-        this.value += 1;
-    },
-    decrement() {
-        console.log('decrement -> this', this);
-        this.value -= 1;
-    },
+const CounterPlugin = function ({
+  rootSelector,
+  initialValue = 0,
+  step = 1,
+  onUpdate = () => null,
+} = {}) {
+  this._value = initialValue;
+  this._step = step;
+  this._refs = this._getRefs(rootSelector);
+
+  this.onUpdate = onUpdate;
+
+  this._bindEvents();
+  this.updateValueUI();
 };
 
-const decrementBtn = document.querySelector('.js-decrement');
-const incrementBtn = document.querySelector('.js-increment');
-const valueEl = document.querySelector('.js-value');
+CounterPlugin.prototype._getRefs = function (rootSelector) {
+  const refs = {};
+  refs.container = document.querySelector(rootSelector);
+  refs.incrementBtn = refs.container.querySelector('[data-increment]');
+  refs.decrementBtn = refs.container.querySelector('[data-decrement]');
+  refs.value = refs.container.querySelector('[data-value]');
 
-decrementBtn.addEventListener('click', function () {
-    console.log('Кликнули на декремент');
+  return refs;
+};
 
-    counter.decrement();
-    console.log(counter);
-    valueEl.textContent = counter.value;
+CounterPlugin.prototype._bindEvents = function () {
+  this._refs.incrementBtn.addEventListener('click', () => {
+    console.log('CounterPlugin.prototype._bindEvents -> this', this);
+    this.increment();
+    this.updateValueUI();
+  });
+
+  this._refs.decrementBtn.addEventListener('click', () => {
+    console.log('CounterPlugin.prototype._bindEvents -> this', this);
+    this.decrement();
+    this.updateValueUI();
+  });
+};
+
+CounterPlugin.prototype.updateValueUI = function () {
+  this._refs.value.textContent = this._value;
+
+  this.onUpdate();
+};
+
+CounterPlugin.prototype.increment = function () {
+  this._value += this._step;
+};
+
+CounterPlugin.prototype.decrement = function () {
+  this._value -= this._step;
+};
+
+new CounterPlugin({
+  rootSelector: '#counter-1',
+  step: 10,
+  initialValue: 100,
+  onUpdate: () => console.log('Это мой кастомный колбек для onUpdate'),
 });
 
-incrementBtn.addEventListener('click', function () {
-    console.log('Кликнули на инкремент');
-
-    counter.increment();
-    console.log(counter);
-    valueEl.textContent = counter.value;
-});
-
-console.log(window);
+new CounterPlugin({ rootSelector: '#counter-2', step: 2 });
