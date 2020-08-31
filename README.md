@@ -7,5 +7,3 @@
   - find
   - every и some
   - reduce
-  - sort
-- Чейнинг методов
