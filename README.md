@@ -1,11 +1,6 @@
 # План занятия
 
 - Методы массивов:
-  - forEach
-  - map
-  - filter
-  - find
-  - every и some
-  - reduce
   - sort
 - Чейнинг методов
+- [Библиотека Lodash](https://github.com/lodash/lodash)
