@@ -18,10 +18,10 @@ const makeTransactionTableRowMarkup = transaction => {
 
 console.log(transactionHistory);
 const tableEl = document.querySelector('.js-transaction-table');
-const makeTransactionTableRows = transactionHistory
+const transactionTableRowsMarkup = transactionHistory
   .map(makeTransactionTableRowMarkup)
   .join('');
 
-tableEl.insertAdjacentHTML('beforeend', makeTransactionTableRows);
+tableEl.insertAdjacentHTML('beforeend', transactionTableRowsMarkup);
 
-console.log(makeTransactionTableRows);
+console.log(transactionTableRowsMarkup);
