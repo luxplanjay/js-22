@@ -1,10 +1,8 @@
 # js-22
 
-- Объекты window и document
-- Поиск DOM-узлов с querySelector и querySelectorAll
-- Свойство textContent
-- Свойства «навигации» по DOM-узлам
-- Работа с classList и атрибутами
-- Создание узлов
-- Вставка узлов: appendChild, insertBefore, append, prepend и т. д.
-- Парс строки: innerHTML и insertAdjacentHTML
+- События
+- Создание и удаление слушателей
+- Объект события
+- Поведение по умолчанию
+- основные события мыши, форм, клавиатуры
+- [Список всех доступных событий](https://developer.mozilla.org/en-US/docs/Web/Events)

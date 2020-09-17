@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>События мыши</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        background-color: #3f51b5;
+        transition: background-color 200ms ease-in;
+      }
+
+      .box--active {
+        background-color: #009688;
+      }
+
+      .inner-box {
+        width: 100px;
+        height: 100px;
+        background-color: #ffc107;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="/">На главную</a></p>
+
+    <div class="box js-box">
+      <div class="inner-box"></div>
+    </div>
+
+    <script src="./js/05-mouse-events.js" type="module"></script>
+  </body>
+</html>
