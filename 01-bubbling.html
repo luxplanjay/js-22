@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Всплытие событий</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      #parent,
+      #child,
+      #inner-child {
+        margin: 16px;
+        padding: 16px;
+        border: 1px solid #ffc107;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      #parent {
+        background-color: #673ab7;
+      }
+
+      #child {
+        background-color: #448aff;
+      }
+
+      #inner-child {
+        background-color: #009688;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="/">На главную</a></p>
+
+    <div id="parent">
+      PARENT
+      <div id="child">
+        CHILD
+        <div id="inner-child">INNER-CHILD</div>
+      </div>
+    </div>
+
+    <script src="/js/01-bubbling.js" type="module"></script>
+  </body>
+</html>

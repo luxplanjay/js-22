@@ -20,6 +20,12 @@ input {
   font: inherit;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .section {
   padding-top: 40px;
   padding-bottom: 40px;
