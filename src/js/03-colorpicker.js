@@ -1,3 +1,5 @@
+import colorCardTpl from '../templates/color-card.hbs';
+import colorCardsTpl from '../templates/color-cards.hbs';
 import colors from './colors.json';
 import '../css/common.css';
 import '../css/colorpicker.css';
@@ -10,19 +12,10 @@ paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 paletteContainer.addEventListener('click', onPaletteContainerClick);
 
 function createColorCardsMarkup(colors) {
-  return colors
-    .map(({ hex, rgb }) => {
-      return `
-      <div class="color-card">
-        <div class="color-swatch" data-hex="${hex}" data-rgb="${rgb}" style="background-color: ${hex}"></div>
-        <div class="color-meta">
-          <p>HEX: ${hex}</p>
-          <p>RGB: ${rgb}</p>
-        </div>
-      </div>
-    `;
-    })
-    .join('');
+  // return colors.map(color => colorCardTpl(color)).join('');
+  // return colors.map(colorCardTpl).join('');
+
+  return colorCardsTpl(colors);
 }
 
 function onPaletteContainerClick(evt) {

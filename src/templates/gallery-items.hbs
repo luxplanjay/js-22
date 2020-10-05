@@ -4,40 +4,17 @@
       <img src="{{flag}}" alt="Флаг {{name}}" width="320">
     </div>
     <h2>{{name}}</h2>
-    <p><b>Столица:</b> {{capital}}</p>
-    <p><b>Валюта:</b> {{currency}}</p>
-    <p><b>Официальный язык:</b> {{language}}</p>
-    <p><b>Население:</b> {{population}} человек</p>
-  </li>
-{{/each}}
-
-{{!-- <li class="gallery__item">
-  <div class="gallery__thumb">
-    <img src="" alt="Флаг страны" width="320">
-  </div>
-  <h2>Страна</h2>
-  <p><b>Столица: столица</b> </p>
-  <p><b>Валюта:</b> тугрик</p>
-  <p><b>Официальный язык:</b> нет</p>
-  <p><b>Население:</b> 0 человек</p>
-</li> --}}
-
-{{!-- {{#each this}}
-  <li class="gallery__item">
-    <div class="gallery__thumb">
-      <img src="{{flag}}" alt="Флаг {{name}}" width="320">
-    </div>
-    <h2>{{name}}</h2>
-    <p><b>Столица:</b> {{capital}}</p>
+    <p><b>Столица: {{capital}}</b> </p>
     <p><b>Валюта:</b> {{currency}}</p>
     <p><b>Официальный язык:</b> {{language}}</p>
     <p><b>Население:</b> {{population}} человек</p>
 
     {{#if infected}}
-      <p>Всё плохо, есть вирус!!!</p>
+      <p style="color: red;">Всё пропало!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
     {{/if}}
+
     {{#unless infected}}
-      <p>Всё ок, вируса нет!!!</p>
+      <p style="color: green;">Фух, пронесло</p>
     {{/unless}}
   </li>
-{{/each}} --}}
+{{/each}}
