@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Мастерская: форма отзыва</title>
+  </head>
+  <body>
+    <p><a href="index.html">На главную</a></p>
+
+    <form class="feedback-form js-feedback-form">
+      <label>
+        <b>Имя</b>
+        <input
+          type="text"
+          name="name"
+          placeholder="Введите ваше имя"
+          value="Анонимус"
+        />
+      </label>
+      <label>
+        <b>Сообщение</b>
+        <textarea name="message" rows="6"></textarea>
+      </label>
+      <button type="submit">Оставить отзыв</button>
+    </form>
+
+    <script src="js/02-feedback.js"></script>
+  </body>
+</html>
