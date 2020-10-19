@@ -1,9 +1,22 @@
 # js-22
 
-- WebStorage API и JSON
-- Введение в шаблонизацию
-  - [Пакет для Parcel](https://www.npmjs.com/package/parcel-plugin-handlebars-precompile)
-- Билд в production
-  - root link
-  - [Public url](https://parceljs.org/cli.html#set-the-public-url-to-serve-on)
-  - [Структура папок для Parcel](https://github.com/parcel-bundler/parcel/issues/233#issuecomment-599081474)
+- Асинхронность в JavaScript
+  - Однопоточность и многопоточность
+  - Отоложенные вызовы (планирование)
+  - Web workers для «многопоточности»
+  - Service workers для «перехвата» запросов от документа (кеширование)
+  - [Статья](https://bitsofco.de/web-workers-vs-service-workers-vs-worklets)
+- Планирование: window.setTimeout() и window.setInterval()
+- Цикл событий (event loop)
+  - [Площадка](http://latentflip.com/loupe)
+  - setTimeout(N) и setTimeout(0)
+- Мастерская: оповещение
+- Мастерская: «надоедалка» подписки
+  - Bootstrap для CSS
+  - Bootstrap Native для JS
+- Встроенный объект Date
+  - Создание
+  - Разница времени
+  - Date.now() и new Date().getTime()
+  - [Библиотека date-fns](https://date-fns.org/)
+- Мастерская: таймер
