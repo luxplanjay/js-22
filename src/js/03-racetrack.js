@@ -8,20 +8,52 @@ const horses = [
   'Seabiscuit',
 ];
 
-console.log(
-  '%c 🤖 Заезд начался, ставки не принимаются!',
-  'color: brown; font-size: 14px;',
-);
+let raceCounter = 0;
+const refs = {
+  startBtn: document.querySelector('.js-start-race'),
+  winnerField: document.querySelector('.js-winner'),
+  progressField: document.querySelector('.js-progress'),
+  tableBody: document.querySelector('.js-results-table > tbody'),
+};
 
-console.log(
-  `%c 🎉 Победил ${1}, финишировав за ${1} времени`,
-  'color: green; font-size: 14px;',
-);
+refs.startBtn.addEventListener('click', onStart);
 
-console.log(
-  '%c 📝 Заезд окончен, принимаются ставки.',
-  'color: blue; font-size: 14px;',
-);
+function onStart() {
+  raceCounter += 1;
+  const promises = horses.map(run);
+
+  updateWinnerField('');
+  updateProgressField('🤖 Заезд начался, ставки не принимаются!');
+  determineWinner(promises);
+  waitForAll(promises);
+}
+
+function determineWinner(horsesP) {
+  Promise.race(horsesP).then(({ horse, time }) => {
+    updateWinnerField(`🎉 Победил ${horse}, финишировав за ${time}
+    времени`);
+    updateResultsTable({ horse, time, raceCounter });
+  });
+}
+
+function waitForAll(horsesP) {
+  Promise.all(horsesP).then(() => {
+    updateProgressField('📝 Заезд окончен, принимаются ставки.');
+  });
+}
+
+function updateWinnerField(message) {
+  refs.winnerField.textContent = message;
+}
+
+function updateProgressField(message) {
+  refs.progressField.textContent = message;
+}
+
+function updateResultsTable({ horse, time, raceCounter }) {
+  const tr = `<tr><td>${raceCounter}</td><td>${horse}</td><td>${time}</td></tr>`;
+  refs.tableBody.insertAdjacentHTML('beforeend', tr);
+}
 
 /*
  * Promise.race([]) для ожидания первого выполнившегося промиса
