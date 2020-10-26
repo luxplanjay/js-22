@@ -23,7 +23,5 @@
     "parcel-plugin-nuke-dist": "^1.0.1"
   },
   "dependencies": {
-    "bootstrap.native": "^3.0.13",
-    "lodash.throttle": "^4.1.1"
   }
 }
