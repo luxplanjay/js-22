@@ -14,19 +14,24 @@
 
 - HTTP-запросы в браузере
   - Fetch API
-- Владка Network
+  - Владка Network
   - HTTP-методы
   - Заголовки
   - MIME-типы
+  - [Параметры запроса](https://pixabay.com/api/docs/)
 - Документация REST API
+- Обработка 404 с fetch 🐷
 - Аутентификация
   - [https://newsapi.org/](https://newsapi.org/)
   - [https://weatherstack.com/](https://weatherstack.com/)
   - [https://pixabay.com/api/docs/](https://pixabay.com/api/docs/)
+- Библиотеки-обёртки
+- [Отмена HTTP-запроса с AbortController](https://davidwalsh.name/javascript-promise-tricks)
 
 ## Часть 3
 
 - Cross-Origin Resource Sharing (CORS)
+  - [Статья на MDN](https://developer.mozilla.org/uk/docs/Web/HTTP/CORS)
   - [https://pokeapi.co/](https://pokeapi.co/)
   - [https://darksky.net/dev](https://darksky.net/dev)
 - Proxy
