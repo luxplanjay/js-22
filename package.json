@@ -25,5 +25,7 @@
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "infinite-scroll": "^3.0.6"
+  }
 }
