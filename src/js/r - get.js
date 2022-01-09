@@ -8,6 +8,6 @@ function fetchBookById(bookId) {
   return fetch(`${BASE_URL}/books/${bookId}`).then(res => res.json());
 }
 
-fetchBooks();
-fetchBookById(2);
-fetchBookById(4);
+// fetchBooks();
+// fetchBookById(2);
+// fetchBookById(4);
