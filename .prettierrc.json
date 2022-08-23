@@ -7,6 +7,6 @@
   "trailingComma": "all",
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
-  "arrowParens": "avoid",
+  "arrowParents": "avoid",
   "proseWrap": "always"
 }
