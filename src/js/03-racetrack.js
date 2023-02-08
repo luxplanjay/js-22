@@ -21,6 +21,7 @@ refs.startBtn.addEventListener('click', onStart);
 function onStart() {
   raceCounter += 1;
   const promises = horses.map(run);
+  console.log('onStart  promises', promises)
 
   updateWinnerField('');
   updateProgressField('🤖 Заезд начался, ставки не принимаются!');
