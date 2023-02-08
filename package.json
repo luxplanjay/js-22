@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/*.html",
+    "start": "parcel src/*.html",
     "build": "parcel build src/*.html"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "bootstrap.native": "^3.0.13",
-    "lodash.throttle": "^4.1.1"
+    "lodash.throttle": "^4.1.1",
+    "notiflix": "^3.2.6"
   }
 }
