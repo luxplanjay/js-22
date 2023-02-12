@@ -22,48 +22,9 @@ import '../css/common.css';
 
 // refs.searchForm.addEventListener('submit', onSearch);
 
-// function onSearch(e) {
-//   e.preventDefault();
 
-//   const form = e.currentTarget;
-//   const searchQuery = form.elements.query.value;
-
-//   API.fetchPokemon(searchQuery)
-//     .then(renderPokemonCard)
-//     .catch(onFetchError)
-//     .finally(() => form.reset());
-// }
-
-// function renderPokemonCard(pokemon) {
-//   const markup = pokemonCardTpl(pokemon);
-//   refs.cardContainer.innerHTML = markup;
-// }
-
-// function onFetchError(error) {
-//   alert('Упс, что-то пошло не так и мы не нашли вашего покемона!');
-// }
-
-// // =========================================
-
-// const url = 'https://newsapi.org/v2/everything?q=cars';
-// const options = {
-//   headers: {
-//     Authorization: '4330ebfabc654a6992c2aa792f3173a3',
-//   },
-// };
-
-// fetch(url, options)
-//   .then(r => r.json())
-//   .then(console.log);
-
-//
-//
-//
-//
-// fetch("https://jsonplaceholder.typicode.com/users")
-//   console.log('fetch("https://jsonplaceholder.typicode.com/users")', fetch("https://jsonplaceholder.typicode.com/users"))
-//
-// 1
+//  1
+// return - передаю значение в след. промис
 // fetch('https://pokeapi.co/api/v2/pokemon/2')
 //   .then(response => {
 //     return response.json();
@@ -74,21 +35,21 @@ import '../css/common.css';
 //
 // 2
 // Подключаю HANDLEBARS-разметку в текущий js-файл в переменную pokemonCardTpl
-// import pokemonCardTpl from '../templates/pokemon-card.hbs';
+import pokemonCardTpl from '../templates/pokemon-card.hbs';
 
-// const a = fetch('https://pokeapi.co/api/v2/pokemon/1')
-//   .then(response => {
-//     console.log(response);
-//     return response.json();
-//   })
-//   .then(pokemon => {
-//     console.log(pokemon);
-//     // ??? разве так можно pokemonCardTpl(pokemon)
-//     // Создаю переменную - markup, в которой будет хранится HANDLEBARS-разметка с данными из сервера (pokemon)
-//     const markup = pokemonCardTpl(pokemon);
-//     // Логирую(вывожу) HANDLEBARS-разметку в консоль и проверяю
-//     console.log('markup', markup)
-//   });
+const a = fetch('https://pokeapi.co/api/v2/pokemon/1')
+  .then(response => {
+    console.log(response);
+    return response.json();
+  })
+  .then(pokemon => {
+    console.log(pokemon);
+    // ??? разве так можно pokemonCardTpl(pokemon)
+    // Создаю переменную - markup, в которой будет хранится HANDLEBARS-разметка с данными из сервера (pokemon)
+    const markup = pokemonCardTpl(pokemon);
+    // Логирую(вывожу) HANDLEBARS-разметку в консоль и проверяю
+    console.log('markup', markup)
+  });
 //
 // 3
 // Создаю ссылку на эл-т из моей разметки HTML
@@ -130,7 +91,7 @@ import '../css/common.css';
 // // });
 
 // РЕФАКТОРИНГ - создаю внешнюю ф-ю для отрисовки(рендеринга) разметк HTML
-// // В параметре передаю данные из СЕРВЕРА - pokemon
+// // В параметре передаю данные из СЕРВЕРА - (pokemon)
 // function renderPokemonCard(pokemon) {
 //   // Создаю переменную - markup, в которой будет хранится HANDLEBARS-разметка с данными из сервера (pokemon)
 //   const markup = pokemonCardTpl(pokemon);
@@ -347,3 +308,39 @@ import '../css/common.css';
 //   // Теперь моя разметк HTML => будет отображать разметку из HANDLEBARS
 //   refs.cardContainer.innerHTML = markup;
 // }
+
+
+/////////////////////////////   РЕПЕТА   ////////////////////////////////
+// function onSearch(e) {
+//   e.preventDefault();
+
+//   const form = e.currentTarget;
+//   const searchQuery = form.elements.query.value;
+
+//   API.fetchPokemon(searchQuery)
+//     .then(renderPokemonCard)
+//     .catch(onFetchError)
+//     .finally(() => form.reset());
+// }
+
+// function renderPokemonCard(pokemon) {
+//   const markup = pokemonCardTpl(pokemon);
+//   refs.cardContainer.innerHTML = markup;
+// }
+
+// function onFetchError(error) {
+//   alert('Упс, что-то пошло не так и мы не нашли вашего покемона!');
+// }
+
+// // =========================================
+
+// const url = 'https://newsapi.org/v2/everything?q=cars';
+// const options = {
+//   headers: {
+//     Authorization: '4330ebfabc654a6992c2aa792f3173a3',
+//   },
+// };
+
+// fetch(url, options)
+//   .then(r => r.json())
+//   .then(console.log);
