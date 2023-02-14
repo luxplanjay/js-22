@@ -35,25 +35,7 @@ import '../css/common.css';
 //
 // 2
 // Подключаю HANDLEBARS-разметку в текущий js-файл в переменную pokemonCardTpl
-import pokemonCardTpl from '../templates/pokemon-card.hbs';
-
-const a = fetch('https://pokeapi.co/api/v2/pokemon/1')
-  .then(response => {
-    console.log(response);
-    return response.json();
-  })
-  .then(pokemon => {
-    console.log(pokemon);
-    // ??? разве так можно pokemonCardTpl(pokemon)
-    // Создаю переменную - markup, в которой будет хранится HANDLEBARS-разметка с данными из сервера (pokemon)
-    const markup = pokemonCardTpl(pokemon);
-    // Логирую(вывожу) HANDLEBARS-разметку в консоль и проверяю
-    console.log('markup', markup)
-  });
-//
-// 3
-// Создаю ссылку на эл-т из моей разметки HTML
-// const refs = {cardContainer: document.querySelector('.js-card-container')}
+// import pokemonCardTpl from '../templates/pokemon-card.hbs';
 
 // const a = fetch('https://pokeapi.co/api/v2/pokemon/1')
 //   .then(response => {
@@ -62,10 +44,28 @@ const a = fetch('https://pokeapi.co/api/v2/pokemon/1')
 //   })
 //   .then(pokemon => {
 //     console.log(pokemon);
+//     // ??? разве так можно pokemonCardTpl(pokemon)
+//     // Создаю переменную - markup, в которой будет хранится HANDLEBARS-разметка с данными из сервера (pokemon)
 //     const markup = pokemonCardTpl(pokemon);
-//     // Теперь моя разметк HTML => будет отображать разметку из HANDLEBARS
-//     refs.cardContainer.innerHTML = markup;
+//     // Логирую(вывожу) HANDLEBARS-разметку в консоль и проверяю
+//     console.log('markup', markup)
 //   });
+//
+// 3
+// Создаю ссылку на эл-т из моей разметки HTML
+const refs = {cardContainer: document.querySelector('.js-card-container')}
+
+const a = fetch('https://pokeapi.co/api/v2/pokemon/1')
+  .then(response => {
+    console.log(response);
+    return response.json();
+  })
+  .then(pokemon => {
+    console.log(pokemon);
+    const markup = pokemonCardTpl(pokemon);
+    // Теперь моя разметк HTML => будет отображать разметку из HANDLEBARS
+    refs.cardContainer.innerHTML = markup;
+  });
 //
 // 4
 // Подключаю HANDLEBARS-разметку в текущий js-файл в переменную pokemonCardTpl
@@ -344,3 +344,5 @@ const a = fetch('https://pokeapi.co/api/v2/pokemon/1')
 // fetch(url, options)
 //   .then(r => r.json())
 //   .then(console.log);
+//
+
