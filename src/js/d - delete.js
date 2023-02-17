@@ -1,5 +1,6 @@
 const BASE_URL = 'http://localhost:4040';
 
+// fetch(url, options) - ЗАПРОС на АДРЕС С определенными конфигурациями
 function removeBook(bookId) {
   const url = `${BASE_URL}/books/${bookId}`;
   const options = {
