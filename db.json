@@ -137,13 +137,121 @@
       "id": 20
     },
     {
+      "id": 21
+    },
+    {
+      "id": 22
+    },
+    {
+      "id": 23
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 1,
+      "id": 24
+    },
+    {
       "title": "Тестовая книга по CSS",
       "author": "Я",
       "genres": [
         "CSS"
       ],
       "rating": 9,
-      "id": 21
+      "id": 25
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 26
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 27
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 28
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 29
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 30
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 31
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 32
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 33
+    },
+    {
+      "title": "Новая тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 34
+    },
+    {
+      "title": "new",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 1,
+      "id": 35
     }
   ]
 }
