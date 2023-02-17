@@ -1,7 +1,7 @@
 // import './js/r - get';
 // import './js/c - post';
 // import './js/u - patch';
-import './js/d - delete';
+// import './js/d - delete';
 //
 // ПРОВЕРКА НА ОШИБКУ 404 - перед тем как распарсить данные
 fetch('').then(response => {
