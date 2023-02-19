@@ -1,5 +1,6 @@
 const BASE_URL = 'http://localhost:4040';
 
+// async - Преобразовую СИНХРОННУЮ Ф-Ю => в АСИНХРОННУЮ Ф-Ю
 async function addBook(book) {
   const options = {
     method: 'POST',
@@ -9,10 +10,18 @@ async function addBook(book) {
     body: JSON.stringify(book),
   };
 
+  // Т.к. метод fetch() возвращает ПРОМИС - то применяю await, т.е сначала приходят данные с БЕКЕНДА
+  // => затем применяю метод fetch() и присваиваю полученный рез-т переменной response
   const response = await fetch(`${BASE_URL}/books`, options);
+
+  // Т.к. res.json() - возвращает ПРОМИС - то также применяю await, т.е сначала приходят данные с БЕКЕНДА
+  // => затем применяю метод fetch() и присваиваю полученный рез-т переменной newBook
   const newBook = await response.json();
 
-  return newBook;
+  // ИЛИ - БЕЗ СОЗДАНИЯ ПЕРЕМЕННОЙ newBook
+  // return await response.json()
+
+  // return newBook;
 }
 
 // async function addBookAndUpdateUI() {
