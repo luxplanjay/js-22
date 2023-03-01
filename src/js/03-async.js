@@ -15,7 +15,7 @@
 
 //   return Promise.resolve(fruits[name]);
 // }
-// // возвращает яблоко
+// // возвращает яблоко🍎
 // getFruit('apple').then(promise => console.log(promise));
 //
 //
