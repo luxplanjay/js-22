@@ -16,3 +16,4 @@
   - Использование - грамотный парс JSON
 - Parceljs и async/await. Ошибка regenerator runtime
 - Синтаксис async/await
+
