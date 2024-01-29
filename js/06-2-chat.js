@@ -8,7 +8,7 @@
 
 const isOnline = true;
 const isFriend = true;
-const isDnd = true;
+const isDnd = false; // вимкнено режим не беспокоить
 
-const canOpenChat = isOnline && isFriend && !isDnd;
-console.log('Можно открыть чат? ', canOpenChat);
+// const canOpenChat = isFriend && isOnline && !isDnd;
+// console.log(`Можна відкрити чат? ${canOpenChat}`);

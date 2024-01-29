@@ -2,19 +2,30 @@
  * Операторы сравнения
  */
 
-// console.log(15 < 3);
+// console.log(10 < 30);
 
 /*
  * Приведение (преобразование) типов к числу
  */
 
-// console.log('10' > 5);
+// console.log('10' > 5); // > => оператор; 10, 5 => операнди
+
+// console.log(true > 5);
+// console.log(Number(true));
+
+// console.log(false < 5);
+// console.log(Number(false));
 
 /*
  * Операторы равенства (== и ===) и неравества (!= и !==)
  * ✅ «ВСЕГДА ИСПОЛЬЗУЕМ СТРОГОЕ РАВЕНСТВО (===) и НЕРАВЕНСТВО (!==)»
  */
 
-const isEqual = 1 === true;
+const isEqual = '5' == 5; // нестрога рівність - зліва і справа приведення до числа
 
-console.log(isEqual);
+const isEqual1 = '0' === false; // строга рівність (сторони не приводяться до числа)
+const isEqual2 = 0 === 0; // кожне значення дорівнює тільки саме собі
+
+// console.log(isEqual);
+// console.log(isEqual1);
+// console.log(isEqual2);

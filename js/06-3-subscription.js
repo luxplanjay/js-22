@@ -8,9 +8,8 @@ const sub = 'free';
 
 // если пользователь pro или пользователь vip тогда есть доступ
 
-const canAccessContent = sub === 'pro' || sub === 'vip';
-// true || false => true
-// false || true => true
-// false || false => false
+const canAccessContent =
+  sub.toLowerCase() === 'pro' || sub.toLowerCase() === 'vip';
+console.log(`Є доступ? ${canAccessContent}`);
 
-console.log('Есть доступ к контенту? ', canAccessContent);
+// !!false => ТАК НЕ РОБИТИ
