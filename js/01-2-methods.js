@@ -10,16 +10,16 @@
  */
 
 const playlist = {
-  name: 'Мой супер плейлист',
+  name: 'Best playlist',
   rating: 5,
-  tracks: ['трек-1', 'трек-2', 'трек-3'],
+  tracks: ['track-1', 'track-2', 'track-3'],
   changeName(newName) {
-    console.log('this внутри changeName: ', this);
-
+    // всередині метода об`єкта НІКОЛИ не використ ім`я самого об`єкта!!!
+    // console.log('this всередині playlist', this);
     this.name = newName;
   },
-  addTrack(track) {
-    this.tracks.push(track);
+  addTrack(newTrack) {
+    this.tracks.push(newTrack);
   },
   updateRating(newRating) {
     this.rating = newRating;
@@ -31,14 +31,11 @@ const playlist = {
 
 console.log(playlist.getTrackCount());
 
-playlist.changeName('Новое имя');
+playlist.changeName('Нове ім`я');
 
-playlist.addTrack('новый трек 1');
+playlist.addTrack('joji');
 console.log(playlist.getTrackCount());
 
-playlist.addTrack('новый трек 2');
-console.log(playlist.getTrackCount());
-
-playlist.updateRating(4);
+playlist.updateRating(12);
 
 console.log(playlist);

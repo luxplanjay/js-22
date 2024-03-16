@@ -10,27 +10,25 @@ const feedback = {
 
 let totalFeedback = 0;
 
-// const keys = Object.keys(feedback);
+// const keys = Object.keys(feedback); // отримать масив ключів з об`єкта feedback
 
 // console.log(keys);
 
 // for (const key of keys) {
-//   console.log(key);
-//   console.log(feedback[key]);
+//   // console.log(feedback.key); // ігнорує змінну key в циклі і бачить її як ім`я ключа
+//   console.log(`${key}: ${feedback[key]}`);
 
 //   totalFeedback += feedback[key];
 // }
 
-// console.log('totalFeedback: ', totalFeedback);
+// console.log('totalFeedback', totalFeedback);
 
 const values = Object.values(feedback);
 
-// console.log(values);
+console.log(values);
 
-// for (const value of values) {
-//   console.log(value);
+for (const value of values) {
+  totalFeedback += value;
+}
 
-//   totalFeedback += value;
-// }
-
-// console.log('totalFeedback: ', totalFeedback);
+console.log(totalFeedback);

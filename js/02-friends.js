@@ -10,21 +10,26 @@ const friends = [
 
 console.table(friends);
 
+// for (const friend of friends) {
+//   // тут отримуємо посилання на кожен обьект
+//   console.log(friend.name);
+
+//   friend.newprop = 555;
+// }
+
+// console.table(friends);
+
 /*
  * Ищем друга по имени
  */
-
 const findFriendByName = function (allFriends, friendName) {
-  for (const friend of allFriends) {
-    // console.log(friend);
-    // console.log(friend.name);
-
+  for (const friend of friends) {
     if (friend.name === friendName) {
-      return 'НАШЛИ!!!';
+      return 'FOUND!';
     }
   }
 
-  return 'НЕ НАШЛИ :(';
+  return 'NOT FOUND!';
 };
 
 // console.log(findFriendByName(friends, 'Poly'));
@@ -39,7 +44,6 @@ const getAllNames = function (allFriends) {
 
   for (const friend of allFriends) {
     console.log(friend.name);
-
     names.push(friend.name);
   }
 
@@ -55,9 +59,6 @@ const getOnlineFriends = function (allFriends) {
   const onlineFriends = [];
 
   for (const friend of allFriends) {
-    console.log(friend);
-    console.log(friend.online);
-
     if (friend.online) {
       onlineFriends.push(friend);
     }
@@ -72,8 +73,6 @@ const getOfflineFriends = function (allFriends) {
   const offlineFriends = [];
 
   for (const friend of allFriends) {
-    console.log(friend.online);
-
     if (!friend.online) {
       offlineFriends.push(friend);
     }
@@ -88,24 +87,39 @@ const getOfflineFriends = function (allFriends) {
 // если тру - в первый, если нет - во второй
 
 const getFriendsByStatus = function (allFriends) {
-  const friendsByStatus = {
+  const friendsByStats = {
     online: [],
     offline: [],
   };
 
   for (const friend of allFriends) {
     if (friend.online) {
-      friendsByStatus.online.push(friend);
-      continue;
+      friendsByStats.online.push(friend);
+      continue; // наступна ітерація
     }
 
-    friendsByStatus.offline.push(friend);
+    friendsByStats.online.push(friend);
 
     // const key = friend.online ? 'online' : 'offline';
-    // friendsByStatus[key].push(friend);
+    // friendsByStats[key].push(friend);
   }
 
-  return friendsByStatus;
+  return friendsByStats;
 };
 
-console.log(getFriendsByStatus(friends));
+// console.log(getFriendsByStatus(friends));
+
+// {
+//   online: [],
+//   offline: [],
+// }
+
+const x = {
+  name: 'Mango',
+  online: false,
+  prop: true,
+};
+
+console.table(friends);
+
+// console.log(Object.keys(x).length); // к-сть властивостей
